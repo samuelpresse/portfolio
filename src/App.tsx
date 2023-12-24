@@ -12,7 +12,10 @@ function App() {
           firstName={information.userData.firstName}
           lastName={information.userData.lastName}
         />
-        <Hero img={information.userData.img} />
+        <Hero
+          img={information.userData.img}
+          description={information.userData.description}
+        />
       </div>
     </>
   );
