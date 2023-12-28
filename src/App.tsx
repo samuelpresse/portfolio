@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import SkillsAndTools from "./components/SkillsAndTools";
+import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -26,6 +28,12 @@ function App() {
       <section id="skills">
         <SkillsAndTools />
       </section>
+
+      <section id="contact">
+        <ContactForm></ContactForm>
+      </section>
+
+      <Footer></Footer>
     </>
   );
 }
