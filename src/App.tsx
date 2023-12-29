@@ -10,16 +10,19 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <Navbar
+    <div className="background-img">
+    <Navbar
         firstName={information.userData.firstName}
         lastName={information.userData.lastName}
       />
-      <section id="hero">
+      <section id="hero" className="pt-5">
         <Hero
           img={information.userData.img}
           description={information.userData.description}
         />
       </section>
+    </div>
+
 
       <section id="projects">
         <Projects />

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "../App.css";
 
 interface Props {
@@ -6,8 +7,28 @@ interface Props {
 }
 
 const Navbar = ({ firstName, lastName }: Props) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY === 0) {
+        setScrolled(false);
+      } else {
+        setScrolled(true);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const headerClass = scrolled ? "header-scrolled" : "";
+
   return (
-    <header className="text-white p-2">
+    <header className={`text-white p-2 ${headerClass}`}>
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg navbar-dark">
           <a className="navbar-brand" href="#">

@@ -24,7 +24,6 @@ const projects = [
       img: "/image-test.jpg"
     },
   ];
-  
 
   export default projects;
   

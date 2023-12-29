@@ -2,10 +2,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer">
-        <p>
-          &copy; 2023. Inspired by{" "}
-          <a href="https://github.com/randilt">RandilT</a>.
-        </p>
+        <p>© 2023 Samuel Pressé-Lefebvre - All rights reserved.</p>
       </footer>
     </>
   );
