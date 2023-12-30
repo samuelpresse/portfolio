@@ -8,7 +8,7 @@ const ContactForm = () => {
     <>
       <div className="contact-section">
         <div className="contact-info">
-          <h2>Let&apos;s talk about everything!</h2>
+          <h2>Let&apos;s get in touch!</h2>
           <p>
             Don&apos;t like forms? Send me an{" "}
             <a href="mailto:samuelpresse@gmail.com">email</a>. 👋

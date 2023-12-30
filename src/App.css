@@ -37,6 +37,12 @@ span {
   color: #fa3939;
 }
 
+.hash-span {
+  margin-top: -100px;
+  padding-bottom: 100px;
+  display: block;
+}
+
 .navbar-brand {
   font-size: 24px !important;
   font-weight: bold;
@@ -380,10 +386,10 @@ form > input[type="submit"]:hover {
 }
 
 footer {
-  background: rgba(33, 37, 41, 0.8);
+  background-color: #201F1F;
   box-shadow: 0 8px 32px 0 rgba(135, 47, 31, 0.37);
   color: #fff;
-  margin-top: 35px;
+  margin-top: 45px;
   text-align: center;
   bottom: 0;
   width: 100%;
