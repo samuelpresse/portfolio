@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import SectionHeading from "./SectionHeading";
 
 const Projects = () => {
   const controls = useAnimation();
@@ -31,10 +32,9 @@ const Projects = () => {
 
   return (
     <>
-      <Heading firstWord="My" secondWord="Projects" />
-
+      <SectionHeading firsPhrase="My work" SecondPhrase="Projects." />
       <motion.div
-        className="project-map"
+        className="project-map container"
         ref={ref}
         initial="hidden"
         animate={controls}

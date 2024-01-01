@@ -57,6 +57,11 @@ const Navbar = ({ firstName, lastName }: Props) => {
                 </a>
               </li>
               <li className="nav-item">
+                <a className="nav-link" href="#experience">
+                  Experience
+                </a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="#projects">
                   Projects
                 </a>

@@ -9,6 +9,7 @@
   font-family: "Share Tech Mono", monospace;
   text-decoration: none;
   list-style: none;
+
 }
 
 body {
@@ -174,7 +175,7 @@ margin: 0;
 
 .project-card {
   width: 310px;
-  height: 550px;
+  height: 525px;
   margin: 20px 50px;
   padding: 18px;
   background: rgba(5, 0, 0, 0.3);
@@ -407,4 +408,20 @@ footer p {
   width: 99vw;
   min-height: 100vh;
   padding-top: 5px;
+}
+
+.custom-list {
+  margin-left: 1.25rem;
+  padding-left: 0.5rem;
+  font-size: 14px !important;
+}
+
+.custom-list li {
+  list-style-type: disc; 
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.section-heading{
+  padding-top: 50px;
 }

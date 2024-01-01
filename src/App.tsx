@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import SkillsAndTools from "./components/SkillsAndTools";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
-import Heading from "./components/Heading";
+import Experience from "./components/Experience";
 
 function App() {
   return (
@@ -24,6 +24,11 @@ function App() {
         </section>
       </div>
 
+      <section className="mb-4" id="experience">
+        <span className="hash-span" id="experience-span"></span>
+        <Experience />
+      </section>
+
       <section id="projects">
         <span className="hash-span" id="projects-span"></span>
         <Projects />
@@ -38,7 +43,7 @@ function App() {
         <ContactForm />
       </section>
 
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }
