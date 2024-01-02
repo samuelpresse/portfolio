@@ -1,6 +1,4 @@
-import {
-  VerticalTimeline
-} from "react-vertical-timeline-component";
+import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import experiences from "../content/experience";
 import ExperienceCard from "./ExperienceCard";
@@ -14,8 +12,9 @@ const Experience = () => {
         SecondPhrase="Work experience."
       />
       <VerticalTimeline>
-        {experiences.map((experience) => (
+        {experiences.map((experience, index) => (
           <ExperienceCard
+            key={index}
             title={experience.title}
             company_name={experience.company_name}
             icon={experience.icon}

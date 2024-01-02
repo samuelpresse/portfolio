@@ -1,4 +1,3 @@
-import react from "../assets/react.svg";
 import streamscan from "../assets/streamscan-logo.svg"
 import keywordStudio from "../assets/keywordStudio-logo.svg"
 

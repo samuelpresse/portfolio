@@ -1,4 +1,3 @@
-import Heading from "./Heading";
 import projects from "../content/projects";
 import ProjectCard from "./ProjectCard";
 import { motion, useAnimation } from "framer-motion";

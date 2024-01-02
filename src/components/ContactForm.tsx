@@ -9,22 +9,20 @@ const ContactForm = () => {
       <div className="contact-section">
         <div className="contact-info">
           <h2>Let&apos;s get in touch!</h2>
-          <p>
-            Don&apos;t like forms? Send me an{" "}
-            <a href="mailto:samuelpresse@gmail.com">email</a>. 👋
-            <br />
-            <br />
-            <h5>Or find me on: </h5>
-            <div className="hero-socials">
-              <div className="social-links">
-                {socials.map((social, index) => (
-                  <a key={index} href={social.url}>
-                    <img src={`/socials/${social.icon}`} alt="" />
-                  </a>
-                ))}
-              </div>
+          Don&apos;t like forms? Send me an{" "}
+          <a href="mailto:samuelpresse@gmail.com">email</a>. 👋
+          <br />
+          <br />
+          <h5>Or find me on: </h5>
+          <div className="hero-socials">
+            <div className="social-links">
+              {socials.map((social, index) => (
+                <a key={index} href={social.url}>
+                  <img src={`/socials/${social.icon}`} alt="" />
+                </a>
+              ))}
             </div>
-          </p>
+          </div>
           <div>
             <p className="contact-links m-0">
               <MdEmail />

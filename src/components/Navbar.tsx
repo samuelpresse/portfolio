@@ -7,6 +7,7 @@ interface Props {
 }
 
 const Navbar = ({ firstName, lastName }: Props) => {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -25,6 +26,8 @@ const Navbar = ({ firstName, lastName }: Props) => {
     };
   }, []);
 
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
   const headerClass = scrolled ? "header-scrolled" : "";
 
   return (
@@ -38,16 +41,17 @@ const Navbar = ({ firstName, lastName }: Props) => {
           <button
             className="navbar-toggler"
             type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
+            onClick={handleNavCollapse}
             aria-controls="navbarNav"
-            aria-expanded="false"
+            aria-expanded={!isNavCollapsed}
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            className="collapse navbar-collapse justify-content-end"
+            className={`collapse navbar-collapse justify-content-end ${
+              isNavCollapsed ? "" : "show"
+            }`}
             id="navbarNav"
           >
             <ul className="navbar-nav">
