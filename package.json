@@ -18,7 +18,8 @@
     "react-icons": "^4.12.0",
     "react-intersection-observer": "^9.5.3",
     "react-vertical-timeline-component": "^3.6.0",
-    "typewriter-effect": "^2.21.0"
+    "typewriter-effect": "^2.21.0",
+    "vercel": "^33.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

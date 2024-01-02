@@ -2,10 +2,9 @@ interface Props {
   name: string;
   img: string;
   description: string;
-  source: string;
 }
 
-const ProjectCard = ({ name, img, description, source }: Props) => {
+const ProjectCard = ({ name, img, description }: Props) => {
   return (
     <div className="project-card">
       <div className="project-img">
