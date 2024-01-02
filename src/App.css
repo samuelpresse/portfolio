@@ -408,7 +408,7 @@ footer p {
 
 .background-img {
   background-position: center;
-  background-image: url(background-img.png);
+  background-image: url(../public/background-img.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 99vw;
