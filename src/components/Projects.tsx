@@ -45,7 +45,6 @@ const Projects = () => {
               name={project.name}
               img={project.img}
               description={project.description}
-              source={project.sourceCode}
             />
           </motion.div>
         ))}
