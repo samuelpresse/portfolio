@@ -390,6 +390,9 @@ form > input[type="submit"]:hover {
   .contact-links {
     flex-direction: column;
   }
+  .email-alert{
+    width: 99% !important;
+  }
 }
 
 footer {
@@ -430,4 +433,9 @@ footer p {
 
 .section-heading{
   padding-top: 50px;
+}
+
+.email-alert{
+  text-align: center;
+  width: 350px;
 }

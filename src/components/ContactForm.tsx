@@ -2,8 +2,39 @@ import socials from "../content/socials";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
+  const form = useRef<HTMLFormElement | null>(null);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (form.current) {
+      const serviceId = import.meta.env.VITE_REACT_APP_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_REACT_APP_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_REACT_APP_EMAILJS_PUBLIC_KEY;
+
+      emailjs
+        .sendForm(`${serviceId}`, `${templateId}`, form.current, `${publicKey}`)
+        .then((result) => {
+          console.log(result.text);
+          if (form.current) {
+            form.current.reset();
+          }
+          setShowSuccess(true);
+          setTimeout(() => {
+            setShowSuccess(false);
+          }, 3000);
+        })
+        .catch((error) => {
+          console.log(error.text);
+        });
+    }
+  };
+
   return (
     <>
       <div className="contact-section">
@@ -42,7 +73,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="contact-form">
-          <form name="contact">
+          <form ref={form} onSubmit={sendEmail} name="contact">
             <input
               type="text"
               name="senderName"
@@ -62,6 +93,11 @@ const ContactForm = () => {
               required
             ></textarea>
             <input type="submit" value="Send" />
+            {showSuccess && (
+              <div className="alert alert-success email-alert" role="alert">
+                L'e-mail a été envoyé avec succès !
+              </div>
+            )}
           </form>
         </div>
       </div>
