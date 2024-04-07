@@ -33,18 +33,25 @@ const Projects = () => {
     <>
       <SectionHeading firsPhrase="My work" SecondPhrase="Projects." />
       <motion.div
-        className="project-map container"
+        className="container"
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={containerVariants}
       >
         {projects.map((project, index) => (
-          <motion.div key={index} variants={projectVariants}>
+          <motion.div
+            key={index}
+            variants={projectVariants}
+            className="postcard dark red"
+          >
             <ProjectCard
               name={project.name}
-              img={project.img}
               description={project.description}
+              img={project.img}
+              technologies={project.tecnologies}
+              sourceCode={project.sourceCode}
+              liveDemo={project.liveDemo}
             />
           </motion.div>
         ))}
