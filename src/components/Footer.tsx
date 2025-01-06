@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer">
-        <p>© 2023 Samuel Pressé-Lefebvre - All rights reserved.</p>
+        <p>© 2025 Samuel Pressé-Lefebvre - All rights reserved.</p>
       </footer>
     </>
   );
