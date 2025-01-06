@@ -95,7 +95,7 @@ const ContactForm = () => {
             <input type="submit" value="Send" />
             {showSuccess && (
               <div className="alert alert-success email-alert" role="alert">
-                L'e-mail a été envoyé avec succès !
+                Your message has been sent successfully!
               </div>
             )}
           </form>
